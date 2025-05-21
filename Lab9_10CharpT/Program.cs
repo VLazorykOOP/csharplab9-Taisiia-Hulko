@@ -12,7 +12,7 @@ class Program
             Console.WriteLine("1 - Завдання 1 (префікс → постфікс)");
             Console.WriteLine("2 - Завдання 2 (фільтрація співробітників)");
             Console.WriteLine("3 - Завдання 3 (ArrayList, IEnumerable, IComparer, ICloneable)");
-            Console.WriteLine("4 - Музикальний диск");
+            Console.WriteLine("4 - Завдання 4 (Музикальний диск)");
             Console.WriteLine("0 - Вийти");
 
             Console.Write("Твій вибір: ");
