@@ -20,30 +20,30 @@ public class Lab9T2
 				{
 					string[] parts = line.Split(' ');
 
-					// Формат: Прізвище Ім'я По батькові Підлога Вік Зарплата
-					// parts[3] - підлога (Ч або Ж)
+					// Р¤РѕСЂРјР°С‚: РџСЂС–Р·РІРёС‰Рµ Р†Рј'СЏ РџРѕ Р±Р°С‚СЊРєРѕРІС– РџС–РґР»РѕРіР° Р’С–Рє Р—Р°СЂРїР»Р°С‚Р°
+					// parts[3] - РїС–РґР»РѕРіР° (Р§ Р°Р±Рѕ Р–)
 					if (parts.Length < 6)
 					{
-						Console.WriteLine("Неправильний формат рядка: " + line);
+						Console.WriteLine("РќРµРїСЂР°РІРёР»СЊРЅРёР№ С„РѕСЂРјР°С‚ СЂСЏРґРєР°: " + line);
 						continue;
 					}
 
-					if (parts[3] == "Ч")
+					if (parts[3] == "Р§")
 						menQueue.Enqueue(line);
-					else if (parts[3] == "Ж")
+					else if (parts[3] == "Р–")
 						womenQueue.Enqueue(line);
 					else
-						Console.WriteLine("Невідомий підлога у рядку: " + line);
+						Console.WriteLine("РќРµРІС–РґРѕРјР° СЃС‚Р°С‚СЊ Сѓ СЂСЏРґРєСѓ: " + line);
 				}
 			}
 
-			Console.WriteLine("Дані про чоловіків:");
+			Console.WriteLine("Р”Р°РЅС– РїСЂРѕ С‡РѕР»РѕРІС–РєС–РІ:");
 			while (menQueue.Count > 0)
 			{
 				Console.WriteLine(menQueue.Dequeue());
 			}
 
-			Console.WriteLine("\nДані про жінок:");
+			Console.WriteLine("\nР”Р°РЅС– РїСЂРѕ Р¶С–РЅРѕРє:");
 			while (womenQueue.Count > 0)
 			{
 				Console.WriteLine(womenQueue.Dequeue());
@@ -51,11 +51,11 @@ public class Lab9T2
 		}
 		catch (FileNotFoundException)
 		{
-			Console.WriteLine("Файл не знайдено: " + fileName);
+			Console.WriteLine("Р¤Р°Р№Р» РЅРµ Р·РЅР°Р№РґРµРЅРѕ: " + fileName);
 		}
 		catch (Exception ex)
 		{
-			Console.WriteLine("Помилка: " + ex.Message);
+			Console.WriteLine("РџРѕРјРёР»РєР°: " + ex.Message);
 		}
 	}
 }
